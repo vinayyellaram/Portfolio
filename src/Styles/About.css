@@ -1,0 +1,66 @@
+.about {
+  font-family: Poppins;
+  width: 100%;
+  color: white;
+  background-color: #00031f;
+  min-height: 100vh;
+  padding-top: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  gap: 1.5em;
+}
+
+h1 {
+  font-size: 24px;
+  color: white;
+}
+
+.about-content {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  width: 80%;
+  background-color: transparent;
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr 2fr;
+}
+
+.about-text {
+  overflow: auto;
+}
+
+.about-text p {
+  padding: 5px;
+}
+
+.my-img {
+  width: 250px;
+  aspect-ratio: 1;
+  border-radius: 2%;
+  justify-content: center;
+}
+
+@media (max-width: 500px) {
+  .about {
+    display: grid;
+    place-items: center;
+    gap: 1em;
+    font-size: 14px;
+  }
+
+  .about-content {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 2fr;
+    place-items: center;
+    align-content: space-around;
+    gap: 1rem;
+  }
+
+  .my-img {
+    min-width: 200px;
+    aspect-ratio: 1;
+    border-radius: 2%;
+  }
+}/*# sourceMappingURL=About.css.map */
