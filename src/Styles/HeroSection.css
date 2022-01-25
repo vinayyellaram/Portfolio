@@ -191,6 +191,7 @@
 @keyframes fill {}
 @media (max-width: 600px) {
   .hero-container {
+    height: 85vh;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 2fr;
     place-items: center;
@@ -198,7 +199,12 @@
 
   .hero-text {
     grid-row: 2;
+    gap: 5px;
     padding-top: 0;
+  }
+
+  .hero-text span span h3 {
+    font-size: 12px;
   }
 
   .img-container img {
@@ -206,7 +212,8 @@
     padding: 5px;
     margin: 0px;
     width: 100%;
-    max-width: 150px;
+    max-width: 100px;
+    min-width: 80px;
     height: auto;
     border-radius: 50%;
   }
@@ -214,7 +221,7 @@
   #dev-logo {
     height: auto;
     width: auto;
-    max-width: 150px;
+    max-width: 120px;
     padding: 0;
   }
 
@@ -223,8 +230,13 @@
   }
 
   .about-btns > button {
-    font-size: 12px;
-    padding: 8px;
+    font-size: 8px;
+    padding: 6px;
+  }
+
+  .about-btns a {
+    font-size: 10px;
+    padding: 6px;
   }
 
   .hero-text p {

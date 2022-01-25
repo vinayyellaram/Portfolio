@@ -6,6 +6,7 @@
   justify-content: center;
   align-items: center;
   overflow-x: hidden;
+  padding-top: 20px;
 }
 
 .contact-container {
@@ -13,10 +14,9 @@
   border-radius: 5px;
   background-color: #272838;
   max-width: 80%;
-  width: 900px;
   min-height: 70vh;
   display: grid;
-  grid-template-rows: 1fr 2fr;
+  grid-template-rows: 1fr 3fr;
   padding: 50px;
   text-align: center;
   gap: 50px;
@@ -147,4 +147,81 @@
 
 .social-media a > img::after {
   content: "aals";
+}
+
+@media (max-width: 500px) {
+  .contact-container {
+    gap: 10px;
+  }
+
+  .contact-title {
+    font-size: 14px;
+    display: flex;
+    flex-direction: row;
+    color: #ffffff;
+    justify-content: center;
+    align-items: center;
+    gap: 0;
+  }
+
+  .form-line-links {
+    gap: 10px;
+    grid-template-rows: 1fr 10px 1fr;
+    grid-template-columns: 1fr;
+  }
+
+  .handshake {
+    max-width: 100px;
+  }
+
+  .social-media a > img {
+    width: 100%;
+    background-color: #00031f;
+    max-width: 40px;
+    min-width: 10px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+  }
+
+  .line {
+    width: 90%;
+    background: #ffffff;
+    border-radius: 5px;
+    height: 2px;
+  }
+
+  .form-container input {
+    max-width: 180px;
+    min-width: 150px;
+    width: 100%;
+    font-size: 14px;
+    border-radius: 5px;
+    border: none;
+    padding: 5px;
+    border: solid #00031f 1px;
+  }
+
+  .form-container input:focus {
+    color: #00031f;
+    border: solid #00031f 1px;
+  }
+
+  .form-container textarea {
+    border: solid #00031f 1px;
+    font-size: 16px;
+    width: 180px;
+    height: 70px;
+    border-radius: 5px;
+    padding: 10px;
+    resize: vertical;
+  }
+
+  .form-container .submit {
+    max-width: 80px;
+    padding: 10px;
+    display: inline-block;
+    border-radius: 2px;
+    border: none;
+    cursor: pointer;
+  }
 }/*# sourceMappingURL=Contact.css.map */
