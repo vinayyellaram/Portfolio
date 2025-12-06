@@ -1,0 +1,21 @@
+@import "tailwindcss";
+
+@theme {
+  --color-pastel-teal: #88d4d1;
+  --color-pastel-lavender: #c4b5fd;
+  --color-pastel-peach: #fdc4b6;
+  
+  --font-sans: 'Inter', system-ui, sans-serif;
+}
+
+@layer base {
+  body {
+    @apply transition-colors duration-300;
+  }
+}
+
+@layer utilities {
+  .gradient-text {
+    @apply bg-gradient-to-r from-pastel-teal via-pastel-lavender to-pastel-peach bg-clip-text text-transparent;
+  }
+}

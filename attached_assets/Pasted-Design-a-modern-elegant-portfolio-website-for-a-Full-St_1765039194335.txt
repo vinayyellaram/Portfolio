@@ -1,0 +1,91 @@
+Design a modern, elegant portfolio website for a Full Stack Developer with 3.5 years of experience specializing in MERN Stack, Magento 2, Laravel, React.js, and PHP.
+
+The portfolio should have a professional, clean, and aesthetic design with both dark and light themes, using pastel color accents and modern typography (e.g., Inter, Poppins, or Satoshi).
+
+Sections to include:
+
+Hero Section:
+
+A large developer photo or illustration (optional)
+
+Name: Vinay Yellaram
+
+Title: Full Stack Developer | MERN, Laravel, Magento 2
+
+Short tagline: "Building scalable web and e-commerce solutions with precision and creativity."
+
+Two buttons: View Projects and Download Resume
+
+About Me Section:
+
+Short paragraph about experience, highlighting backend API development, frontend UI/UX, SEO optimization, cloud deployment (AWS EC2, Docker, Jenkins CI/CD), and third-party tool integrations (GA, GTM, HubSpot CRM, PIM, DAM).
+
+Add a subtle animated skill chart or timeline visualization of experience.
+
+Key Projects Section:
+
+Grid or card layout with hover animations.
+
+Include featured projects:
+
+Tomduffy (Magento 2) – SEO optimization, GA & GTM integration, Brandfolder DAM integration.
+
+Harmonbio (Laravel & React.js) – Headless UI, optimized CRM backend, cron jobs, queue management.
+
+Winoa (Magento 2) – PIM integration, AWS EC2 deployment using Docker & Jenkins CI/CD.
+
+OroCommerce – Team leadership, custom modules with PHP & PostgreSQL, Twig templates.
+
+Each project card should have a "View Details" modal or link.
+
+Skills Section:
+
+Categorized skill badges or progress bars for:
+
+Languages: PHP, JavaScript, HTML5, CSS3, SQL
+
+Frameworks/Libraries: Laravel, React.js, Inertia.js, Tailwind CSS
+
+Platforms: Magento 2
+
+Databases: MySQL, PostgreSQL
+
+DevOps: GitHub, Docker, Jenkins, AWS EC2
+
+Integrations: GA, GTM, HubSpot CRM, PIM, DAM
+
+Experience Section:
+
+Timeline view of companies or projects with role descriptions, key achievements, and responsibilities.
+
+Achievements Section:
+
+Highlight leadership, successful PIM integration project, proactive problem-solving, and technical excellence.
+
+Contact Section:
+
+Contact form and social links (GitHub, LinkedIn, Email).
+
+Minimal, clean footer.
+
+Design Style:
+
+Layout: Grid-based, responsive, and minimal.
+
+Colors: Soft pastel accent (teal, lavender, or peach) on dark/light backgrounds.
+
+Typography: Modern sans-serif (Inter, Satoshi, or Poppins).
+
+Animations: Smooth transitions, subtle hover effects, and slight parallax.
+
+Icons: Lucide or Phosphor icons.
+
+Bonus Features:
+
+Dark/Light theme toggle.
+
+Animated skill progress or floating tech icons.
+
+Subtle scroll-based animations (Framer Motion style).
+
+The final design should feel modern, calm, and professional, suitable for showcasing a strong technical portfolio to hiring managers and clients.
