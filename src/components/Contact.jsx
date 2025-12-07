@@ -23,9 +23,9 @@ export default function Contact() {
   }
 
   const socials = [
-    { icon: Github, label: 'GitHub', href: 'https://github.com', color: 'hover:text-gray-800 dark:hover:text-gray-200' },
+    { icon: Github, label: 'GitHub', href: 'https://github.com/vinayyellaram', color: 'hover:text-gray-800 dark:hover:text-gray-200' },
     { icon: Linkedin, label: 'LinkedIn', href: 'https://linkedin.com', color: 'hover:text-blue-600' },
-    { icon: Mail, label: 'Email', href: 'mailto:vinay@example.com', color: 'hover:text-pastel-teal' },
+    { icon: Mail, label: 'Email', href: 'mailto:vinayyellaram715@gmail.com', color: 'hover:text-pastel-teal' },
   ]
 
   return (

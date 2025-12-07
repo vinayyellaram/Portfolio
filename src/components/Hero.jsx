@@ -2,6 +2,7 @@ import { motion, useScroll, useTransform } from 'framer-motion'
 import { ArrowDown, Download, Code, Sparkles, Zap } from 'lucide-react'
 import { useState, useEffect } from 'react'
 import Scene3D from './Scene3D'
+import background from "../assets/Hero_img.jpeg";
 
 export default function Hero() {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
@@ -44,12 +45,20 @@ export default function Hero() {
   }))
 
   return (
-    <section className="min-h-screen flex items-center justify-center px-6 py-20 relative overflow-hidden">
+    <section className="min-h-screen flex items-center justify-center px-6 py-20 relative overflow-hidden"
+      style={{
+        backgroundImage: `url(${background})`,
+        backgroundSize: "cover",
+        backgroundRepeat: "no-repeat",
+        backgroundPosition: "center center",
+        backgroundBlendMode: "soft-light"
+      }}
+    >
       {/* 3D Background */}
-      <Scene3D />
+      {/* <Scene3D /> */}
 
       {/* Animated gradient background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-white via-pastel-lavender/5 to-pastel-teal/10 dark:from-gray-900 dark:via-pastel-lavender/10 dark:to-pastel-teal/20" />
+      <div className="absolute inset-0 from-white via-pastel-lavender/5 to-pastel-teal/10 dark:from-gray-900 dark:via-pastel-lavender/10 dark:to-pastel-teal/20" />
 
       {/* Floating geometric shapes with parallax */}
       {floatingShapes.map((shape, index) => (
@@ -101,7 +110,7 @@ export default function Hero() {
       {/* Grid pattern overlay */}
       <div className="absolute inset-0 opacity-[0.02] dark:opacity-[0.05]"
         style={{
-          backgroundImage: `linear-gradient(rgba(0,0,0,0.5) 1px, transparent 1px), linear-gradient(90deg, rgba(0,0,0,0.5) 1px, transparent 1px)`,
+          // backgroundImage: `linear-gradient(rgba(0,0,0,0.5) 1px, transparent 1px), linear-gradient(90deg, rgba(0,0,0,0.5) 1px, transparent 1px)`,
           backgroundSize: '50px 50px'
         }}
       />
@@ -111,7 +120,7 @@ export default function Hero() {
         className="max-w-5xl mx-auto text-center relative z-10"
       >
         {/* Floating icons around the avatar */}
-        <div className="relative inline-block mb-8">
+        {/* <div className="relative inline-block mb-8">
           <motion.div
             initial={{ scale: 0, rotate: -180 }}
             animate={{ scale: 1, rotate: 0 }}
@@ -124,7 +133,7 @@ export default function Hero() {
             <div className="absolute inset-0 bg-gradient-to-br from-white/20 to-transparent" />
             <span className="relative z-10">VY</span>
 
-            {/* Orbiting icons */}
+            
             {[Code, Sparkles, Zap].map((Icon, i) => (
               <motion.div
                 key={i}
@@ -162,7 +171,7 @@ export default function Hero() {
               </motion.div>
             ))}
           </motion.div>
-        </div>
+        </div> */}
 
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -175,7 +184,8 @@ export default function Hero() {
               y: y2
             }}
           >
-            Vinay Yellaram
+
+            <span className='drop-shadow-2xl'>Vinay Yellaram</span>
             <motion.div
               className="absolute -top-6 -right-6 w-12 h-12 bg-gradient-to-r from-yellow-400 to-orange-400 rounded-full blur-xl opacity-60"
               animate={{
@@ -223,7 +233,7 @@ export default function Hero() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.9 }}
-          className="text-lg md:text-xl text-gray-600 dark:text-gray-400 mb-10 max-w-3xl mx-auto leading-relaxed"
+          className="text-lg md:text-xl text-gray-600 dark:text-gray-200 mb-10 max-w-3xl mx-auto leading-relaxed"
         >
           Crafting innovative web solutions with <span className="font-bold text-pastel-lavender dark:text-pastel-teal">3.5 years</span> of expertise in building scalable e-commerce platforms and modern applications.
         </motion.p>
@@ -235,15 +245,15 @@ export default function Hero() {
           className="flex flex-col sm:flex-row gap-4 justify-center items-center"
           style={{ y: y1 }}
         >
-          <motion.button
+          {/* <motion.button
             onClick={scrollToProjects}
-            className="px-8 py-4 bg-gradient-to-r from-pastel-teal to-pastel-lavender text-white rounded-full font-semibold shadow-lg hover:shadow-2xl transform transition-all duration-300 relative overflow-hidden group"
+            className="px-8 py-4 from-pastel-teal to-pastel-lavender text-white rounded-full font-semibold shadow-lg hover:shadow-2xl transform transition-all duration-300 relative overflow-hidden group"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
             <span className="relative z-10">View Projects</span>
-            <div className="absolute inset-0 bg-gradient-to-r from-pastel-lavender to-pastel-peach opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-          </motion.button>
+            <div className="absolute inset-0 from-pastel-lavender to-pastel-peach opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+          </motion.button> */}
           {/* <motion.button
             className="px-8 py-4 border-2 border-pastel-lavender dark:border-pastel-teal text-gray-800 dark:text-gray-200 rounded-full font-semibold hover:bg-pastel-lavender/10 dark:hover:bg-pastel-teal/10 transition-all duration-300 flex items-center gap-2"
             whileHover={{ scale: 1.05 }}

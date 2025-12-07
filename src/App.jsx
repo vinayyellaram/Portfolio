@@ -22,7 +22,7 @@ function App() {
 
   return (
     <div className="min-h-screen bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 transition-colors duration-300">
-      <button
+      {/* <button
         onClick={() => setDarkMode(!darkMode)}
         className="fixed top-6 right-6 z-50 p-3 rounded-full bg-pastel-lavender/20 dark:bg-pastel-teal/20 hover:bg-pastel-lavender/30 dark:hover:bg-pastel-teal/30 transition-all duration-300 shadow-lg"
         aria-label="Toggle theme"
@@ -32,17 +32,17 @@ function App() {
         ) : (
           <Moon className="w-6 h-6 text-indigo-600" />
         )}
-      </button>
+      </button> */}
 
       <Hero />
       <About />
-      <ImageGallery />
-      <Projects />
+      {/* <ImageGallery /> */}
+      {/* <Projects /> */}
       <Skills />
-      <Experience />
-      <Achievements />
+      {/* <Experience />
+      <Achievements /> */}
       <Contact />
-      
+
       <footer className="py-6 text-center text-sm text-gray-600 dark:text-gray-400 border-t border-gray-200 dark:border-gray-800">
         <p>© 2024 Vinay Yellaram. All rights reserved.</p>
       </footer>
