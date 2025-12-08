@@ -33,14 +33,33 @@ export default function About() {
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
+
+            {/* <h3
+              className="font-raging uppercase font-black text-7xl sm:text-4xl md:text-[120px] lg:text-[200px] xl:text-[290px] text-white select-none pointer-events-none leading-none text-center"
+              style={{
+                fontFeatureSettings: "'ss01' on",
+                textShadow: `
+                    0 0 250px rgba(235, 51, 255, 0.44),
+                    0 0 31px rgba(154, 66, 255, 0.44),
+                    0 0 250px rgba(157, 66, 255, 0.80),
+                    0 0 50px rgba(167, 66, 255, 0.40),
+                    0 0 44.9px rgba(101, 66, 255, 0.44)
+                      `,
+              }}
+            >
+              BEYOND YOUR GAME
+            </h3> */}
+
             <p className="text-lg text-gray-700 dark:text-gray-300 mb-6 leading-relaxed">
-              With <span className="font-semibold text-pastel-lavender dark:text-pastel-teal">3.5 years of experience</span> as a Full Stack Developer, I specialize in creating robust, scalable web applications and e-commerce solutions. My expertise spans across the MERN stack, Laravel, and Magento 2 platforms.
+              I’m a <span className="font-semibold text-pastel-lavender dark:text-pastel-teal">Full Stack Developer</span> who loves turning ideas into fast, scalable, and user-focused digital experiences. I work across <span className="font-semibold text-pastel-lavender dark:text-pastel-teal">Laravel, MERN Stack, and Magento 2</span>, building everything from APIs to full e-commerce ecosystems.
             </p>
+
             <p className="text-lg text-gray-700 dark:text-gray-300 mb-6 leading-relaxed">
-              I excel in backend API development, frontend UI/UX implementation, SEO optimization, and cloud deployment using AWS EC2, Docker, and Jenkins CI/CD. My experience includes seamless integration of third-party tools like Google Analytics, GTM, HubSpot CRM, PIM, and DAM systems.
+              My passion lies in crafting clean, maintainable code and optimizing performance at every layer — from backend logic to frontend design. I enjoy solving real-world problems with tools like <span className="font-semibold text-pastel-lavender dark:text-pastel-teal">AWS, Docker, and Jenkins</span>, and integrating platforms such as <span className="font-semibold text-pastel-lavender dark:text-pastel-teal">Google Analytics, GTM, HubSpot CRM, PIM, and DAM</span> to enhance business efficiency.
             </p>
+
             <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
-              I'm passionate about writing clean, maintainable code and delivering solutions that drive business value while providing excellent user experiences.
+              Every project I build reflects one goal — to create products that perform well, look great, and make a difference.
             </p>
           </motion.div>
 

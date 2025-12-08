@@ -23,7 +23,7 @@ export default function Skills() {
     {
       title: 'Platforms',
       icon: Workflow,
-      skills: ['Magento 2', 'OroCommerce', 'WordPress', 'Shopify'],
+      skills: ['Magento 2', 'OroCommerce',],
       color: 'from-pastel-peach to-orange-400'
     },
     {

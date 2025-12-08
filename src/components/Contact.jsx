@@ -2,29 +2,54 @@ import { motion } from 'framer-motion'
 import { useInView } from 'framer-motion'
 import { useRef, useState } from 'react'
 import { Mail, Github, Linkedin, Send } from 'lucide-react'
+import emailjs from '@emailjs/browser';
 
 export default function Contact() {
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true, margin: "-100px" })
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
+    user_name: '',
+    user_email: '',
     message: ''
   })
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    alert('Thank you for your message! This is a demo form.')
-    setFormData({ name: '', email: '', message: '' })
+
+    sendEmail();
+
+    setFormData({ user_name: '', user_email: '', message: '' })
   }
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value })
   }
 
+  const sendEmail = async () => {
+    try {
+      const response = await emailjs.send(
+        'SERVICE_ID',
+        'Template_ID',
+        {
+          user_name: formData.user_name,
+          user_email: formData.user_email,
+          message: formData.message
+        },
+        'PRIVATE_KEY'
+      );
+
+      console.log('SUCCESS!', response);
+      alert('Message sent!');
+      setFormData({ user_name: '', user_email: '', message: '' });
+    } catch (error) {
+      console.log('FAILED...', error);
+      alert('Error sending message.');
+    }
+  };
+
   const socials = [
     { icon: Github, label: 'GitHub', href: 'https://github.com/vinayyellaram', color: 'hover:text-gray-800 dark:hover:text-gray-200' },
-    { icon: Linkedin, label: 'LinkedIn', href: 'https://linkedin.com', color: 'hover:text-blue-600' },
+    { icon: Linkedin, label: 'LinkedIn', href: 'https://www.linkedin.com/in/vinay-yellaram-a4203b194/', color: 'hover:text-blue-600' },
     { icon: Mail, label: 'Email', href: 'mailto:vinayyellaram715@gmail.com', color: 'hover:text-pastel-teal' },
   ]
 
@@ -52,14 +77,14 @@ export default function Contact() {
           >
             <form onSubmit={handleSubmit} className="bg-white dark:bg-gray-900 rounded-2xl p-8 shadow-lg border border-gray-200 dark:border-gray-700">
               <div className="mb-6">
-                <label htmlFor="name" className="block text-sm font-semibold mb-2 text-gray-700 dark:text-gray-300">
+                <label htmlFor="user_name" className="block text-sm font-semibold mb-2 text-gray-700 dark:text-gray-300">
                   Name
                 </label>
                 <input
                   type="text"
-                  id="name"
-                  name="name"
-                  value={formData.name}
+                  id="user_name"
+                  name="user_name"
+                  value={formData.user_name}
                   onChange={handleChange}
                   required
                   className="w-full px-4 py-3 rounded-lg bg-gray-50 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 focus:border-pastel-lavender dark:focus:border-pastel-teal focus:outline-none transition-colors text-gray-900 dark:text-gray-100"
@@ -68,14 +93,14 @@ export default function Contact() {
               </div>
 
               <div className="mb-6">
-                <label htmlFor="email" className="block text-sm font-semibold mb-2 text-gray-700 dark:text-gray-300">
+                <label htmlFor="user_email" className="block text-sm font-semibold mb-2 text-gray-700 dark:text-gray-300">
                   Email
                 </label>
                 <input
                   type="email"
-                  id="email"
-                  name="email"
-                  value={formData.email}
+                  id="user_email"
+                  name="user_email"
+                  value={formData.user_email}
                   onChange={handleChange}
                   required
                   className="w-full px-4 py-3 rounded-lg bg-gray-50 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 focus:border-pastel-lavender dark:focus:border-pastel-teal focus:outline-none transition-colors text-gray-900 dark:text-gray-100"
