@@ -3,6 +3,8 @@ import { useInView } from 'framer-motion'
 import { useRef, useState } from 'react'
 import { Mail, Github, Linkedin, Send } from 'lucide-react'
 import emailjs from '@emailjs/browser';
+import GlbModel from './3dModels/GlbModel';
+
 
 export default function Contact() {
   const ref = useRef(null)
@@ -13,6 +15,8 @@ export default function Contact() {
     message: ''
   })
 
+  const [currectAnimation, setCurrectAnimation] = useState("");
+
   const handleSubmit = (e) => {
     e.preventDefault()
 
@@ -22,8 +26,22 @@ export default function Contact() {
   }
 
   const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value })
-  }
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+
+    // Play animation immediately
+    setCurrectAnimation("play");
+
+    // Clear any existing timeout to restart the 2-second timer
+    if (window.animationTimeout) {
+      clearTimeout(window.animationTimeout);
+    }
+
+    // Stop animation after 2 seconds
+    window.animationTimeout = setTimeout(() => {
+      setCurrectAnimation(""); // stop animation
+    }, 2000);
+  };
+
 
   const sendEmail = async () => {
     try {
@@ -55,6 +73,7 @@ export default function Contact() {
 
   return (
     <section ref={ref} className="py-20 px-6 bg-gray-50 dark:bg-gray-800/50">
+
       <div className="max-w-4xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -140,6 +159,15 @@ export default function Contact() {
             transition={{ duration: 0.6, delay: 0.4 }}
             className="space-y-6"
           >
+            <GlbModel currectAnimation={currectAnimation} />
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, x: 50 }}
+            animate={isInView ? { opacity: 1, x: 0 } : {}}
+            transition={{ duration: 0.6, delay: 0.4 }}
+            className="space-y-6"
+          >
             <div className="bg-white dark:bg-gray-900 rounded-2xl p-8 shadow-lg border border-gray-200 dark:border-gray-700">
               <h3 className="text-2xl font-bold mb-6 text-gray-800 dark:text-gray-100">Connect With Me</h3>
               <div className="space-y-4">
@@ -161,6 +189,15 @@ export default function Contact() {
               </div>
             </div>
 
+
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, x: 50 }}
+            animate={isInView ? { opacity: 1, x: 0 } : {}}
+            transition={{ duration: 0.6, delay: 0.4 }}
+            className="space-y-6"
+          >
             <div className="bg-gradient-to-br from-pastel-teal/10 via-pastel-lavender/10 to-pastel-peach/10 dark:from-pastel-teal/20 dark:via-pastel-lavender/20 dark:to-pastel-peach/20 rounded-2xl p-8 border border-pastel-lavender/20 dark:border-pastel-teal/20">
               <h3 className="text-xl font-bold mb-3 text-gray-800 dark:text-gray-100">Let's Build Something Amazing</h3>
               <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
