@@ -28,14 +28,14 @@ export default function Contact() {
   const sendEmail = async () => {
     try {
       const response = await emailjs.send(
-        'SERVICE_ID',
-        'Template_ID',
+        'service_xw1i8uo',
+        'template_pr8gocs',
         {
           user_name: formData.user_name,
           user_email: formData.user_email,
           message: formData.message
         },
-        'PRIVATE_KEY'
+        'L-ovI-oSbdLSpITK7'
       );
 
       console.log('SUCCESS!', response);
