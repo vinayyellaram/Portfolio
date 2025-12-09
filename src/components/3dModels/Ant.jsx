@@ -1,10 +1,10 @@
 import React, { useEffect, useRef } from 'react'
 import { useGLTF, useAnimations } from '@react-three/drei'
-import AntModel from "./home_worker_ant.glb"
+// import AntModel from "./home_worker_ant.glb"
 
 const Ant = ({ currectAnimation, ...props }) => {
     const group = useRef()
-    const { nodes, materials, animations } = useGLTF(AntModel)
+    const { nodes, materials, animations } = useGLTF('/models/home_worker_ant.glb')
     const { actions } = useAnimations(animations, group)
 
     useEffect(() => {
