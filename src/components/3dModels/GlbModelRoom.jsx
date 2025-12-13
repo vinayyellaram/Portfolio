@@ -4,8 +4,9 @@ import {
     CameraControls,
     PerspectiveCamera,
 } from "@react-three/drei";
-import { Room2 } from "./Room2";
-import Room from "./Room";
+// import { Room2 } from "./Room2";
+// import Room from "./Room";
+import { Room } from "../3dModels/Room_v3";
 
 function RotatingRoom(props) {
     const roomRef = useRef();
@@ -37,10 +38,11 @@ function GlbModelRoom() {
                         resolution={1024}
                     />
                     <Suspense>
-                        <RotatingRoom scale={1.0} position={[0, -0.2, 0]} rotation={[0.3, -0.7, 0]} />
+                        {/* <RotatingRoom scale={1.0} position={[0, -0.2, 0]} rotation={[0.2, -0.7, 0]} /> */}
+                        <Room scale={1.0} position={[1.0, -0.2, 0]} rotation={[0.2, -0.7, 0]} />
                     </Suspense>
 
-                    {/* <CameraControls /> */}
+                    <CameraControls />
                 </Canvas>
             </div>
         </main>
