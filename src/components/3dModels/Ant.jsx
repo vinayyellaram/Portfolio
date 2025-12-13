@@ -1,10 +1,9 @@
 import React, { useEffect, useRef } from 'react'
 import { useGLTF, useAnimations } from '@react-three/drei'
-// import AntModel from "./home_worker_ant.glb"
 
 const Ant = ({ currectAnimation, ...props }) => {
     const group = useRef()
-    const { nodes, materials, animations } = useGLTF('/models/home_worker_ant.glb')
+    const { nodes, materials, animations } = useGLTF('/models/home_worker_ant_compressed.glb')
     const { actions } = useAnimations(animations, group)
 
     useEffect(() => {
@@ -30,15 +29,6 @@ const Ant = ({ currectAnimation, ...props }) => {
                         scale={0.01}>
                         <group name="Object_2">
                             <group name="RootNode">
-                                <group
-                                    name="Area"
-                                    position={[0.813, 120.047, 97.025]}
-                                    rotation={[Math.PI / 2, 0, 0]}
-                                    scale={[45.245, 45.245, 32.688]}>
-                                    <group name="Object_5" rotation={[Math.PI / 2, 0, 0]}>
-                                        <group name="Object_6" />
-                                    </group>
-                                </group>
                                 <group name="Armature" rotation={[-Math.PI / 2, 0, 0]}>
                                     <group name="Object_8">
                                         <primitive object={nodes._rootJoint} />
@@ -48,42 +38,27 @@ const Ant = ({ currectAnimation, ...props }) => {
                                             material={materials.Default}
                                             skeleton={nodes.Object_145.skeleton}
                                         />
-                                        <group name="Object_144" rotation={[-Math.PI / 2, 0, 0]} />
                                     </group>
                                 </group>
-                                {/* <group
-                                    name="Beautiful_painting_by_Jungle_Jim_Painting_0"
-                                    position={[-161.428, 81.882, -0.793]}
-                                    rotation={[-Math.PI / 2, 0, 0]}
-                                    scale={100}>
-                                    <mesh
-                                        name="Beautiful_painting_by_Jungle_Jim_Painting_0_Beautiful_painting_by_Jungle_Jim_Painting_0_baked_0"
-                                        geometry={
-                                            nodes
-                                                .Beautiful_painting_by_Jungle_Jim_Painting_0_Beautiful_painting_by_Jungle_Jim_Painting_0_baked_0
-                                                .geometry
-                                        }
-                                        material={materials.Beautiful_painting_by_Jungle_Jim_Painting_0_baked}
-                                    />
-                                </group> */}
                                 <group
                                     name="Camera"
                                     position={[-23.703, 5.558, 424.442]}
                                     rotation={[0.01, 1.522, 0.016]}
-                                    scale={100}>
-                                    <group name="Object_149" />
-                                </group>
-                                {/* <group
+                                    scale={100}
+                                />
+                                <group
                                     name="Carpet"
                                     position={[-20.452, -0.976, 88.223]}
                                     rotation={[-Math.PI / 2, 0, 0]}
                                     scale={146.507}>
                                     <mesh
                                         name="Carpet_Material013_0"
+                                        castShadow
+                                        receiveShadow
                                         geometry={nodes.Carpet_Material013_0.geometry}
                                         material={materials['Material.013']}
                                     />
-                                </group> */}
+                                </group>
                                 <group
                                     name="Cube009"
                                     position={[0, 120.74, 99.394]}
@@ -91,6 +66,8 @@ const Ant = ({ currectAnimation, ...props }) => {
                                     scale={[-34.332, -3.846, -20.887]}>
                                     <mesh
                                         name="Cube009_Material004_0"
+                                        castShadow
+                                        receiveShadow
                                         geometry={nodes.Cube009_Material004_0.geometry}
                                         material={materials['Material.004']}
                                     />
@@ -102,6 +79,8 @@ const Ant = ({ currectAnimation, ...props }) => {
                                     scale={5.713}>
                                     <mesh
                                         name="Cylinder001_Material002_0"
+                                        castShadow
+                                        receiveShadow
                                         geometry={nodes.Cylinder001_Material002_0.geometry}
                                         material={materials['Material.002']}
                                     />
@@ -112,6 +91,8 @@ const Ant = ({ currectAnimation, ...props }) => {
                                         scale={[0.081, 0.081, 1.221]}>
                                         <mesh
                                             name="Cylinder002__0"
+                                            castShadow
+                                            receiveShadow
                                             geometry={nodes.Cylinder002__0.geometry}
                                             material={materials['Cylinder.002__0']}
                                         />
@@ -123,6 +104,8 @@ const Ant = ({ currectAnimation, ...props }) => {
                                         scale={[0.081, 0.081, 1.221]}>
                                         <mesh
                                             name="Cylinder003__0"
+                                            castShadow
+                                            receiveShadow
                                             geometry={nodes.Cylinder003__0.geometry}
                                             material={materials['Cylinder.002__0']}
                                         />
@@ -135,11 +118,15 @@ const Ant = ({ currectAnimation, ...props }) => {
                                     scale={[0.464, 0.464, 6.978]}>
                                     <mesh
                                         name="Cylinder005_scissors1_0"
+                                        castShadow
+                                        receiveShadow
                                         geometry={nodes.Cylinder005_scissors1_0.geometry}
                                         material={materials.scissors1}
                                     />
                                     <mesh
                                         name="Cylinder005_Scissors2_0"
+                                        castShadow
+                                        receiveShadow
                                         geometry={nodes.Cylinder005_Scissors2_0.geometry}
                                         material={materials.Scissors2}
                                     />
@@ -151,6 +138,8 @@ const Ant = ({ currectAnimation, ...props }) => {
                                     scale={[97.877, 45.24, 42.965]}>
                                     <mesh
                                         name="Desk_Material011_0"
+                                        castShadow
+                                        receiveShadow
                                         geometry={nodes.Desk_Material011_0.geometry}
                                         material={materials['Material.011']}
                                     />
@@ -162,6 +151,8 @@ const Ant = ({ currectAnimation, ...props }) => {
                                     scale={[-25.032, -11.666, -1.742]}>
                                     <mesh
                                         name="Keyboard_Material001_0"
+                                        castShadow
+                                        receiveShadow
                                         geometry={nodes.Keyboard_Material001_0.geometry}
                                         material={materials['Material.001']}
                                     />
@@ -172,6 +163,8 @@ const Ant = ({ currectAnimation, ...props }) => {
                                         scale={[0.477, 0.104, 0.63]}>
                                         <mesh
                                             name="Cube007__0"
+                                            castShadow
+                                            receiveShadow
                                             geometry={nodes.Cube007__0.geometry}
                                             material={materials['Cylinder.002__0']}
                                         />
@@ -184,49 +177,26 @@ const Ant = ({ currectAnimation, ...props }) => {
                                     scale={[4.014, 4.08, 4.244]}>
                                     <mesh
                                         name="Lamp_Material009_0"
+                                        castShadow
+                                        receiveShadow
                                         geometry={nodes.Lamp_Material009_0.geometry}
                                         material={materials['Material.009']}
                                     />
                                     <mesh
                                         name="Lamp_Material010_0"
+                                        castShadow
+                                        receiveShadow
                                         geometry={nodes.Lamp_Material010_0.geometry}
-                                        material={materials['Material.010']}
+                                        material={materials['Material.009']}
                                     />
                                     <mesh
                                         name="Lamp_Material005_0"
+                                        castShadow
+                                        receiveShadow
                                         geometry={nodes.Lamp_Material005_0.geometry}
                                         material={materials['Material.005']}
                                     />
-                                    <group
-                                        name="Spot001"
-                                        position={[-0.071, 0.903, -0.643]}
-                                        rotation={[-1.519, -1.369, 3.127]}
-                                        scale={[1.47, 1.413, 1.493]}>
-                                        <group name="Object_174" rotation={[Math.PI / 2, 0, 0]}>
-                                            <group name="Object_175" />
-                                        </group>
-                                    </group>
                                 </group>
-                                <group
-                                    name="Light"
-                                    position={[407.625, 590.386, -100.545]}
-                                    rotation={[1.89, 0.881, -2.045]}
-                                    scale={100}>
-                                    <group name="Object_177" rotation={[Math.PI / 2, 0, 0]}>
-                                        <group name="Object_178" />
-                                    </group>
-                                </group>
-                                {/* <group
-                                    name="Obese_Family_picture"
-                                    position={[-163.409, 108.618, 95.98]}
-                                    rotation={[0, Math.PI / 2, 0]}
-                                    scale={15.084}>
-                                    <mesh
-                                        name="Obese_Family_picture_Obese_Family_picture_baked_0"
-                                        geometry={nodes.Obese_Family_picture_Obese_Family_picture_baked_0.geometry}
-                                        material={materials.Obese_Family_picture_baked}
-                                    />
-                                </group> */}
                                 <group
                                     name="Office_Chair"
                                     position={[0, 60.611, -31.36]}
@@ -234,16 +204,22 @@ const Ant = ({ currectAnimation, ...props }) => {
                                     scale={100}>
                                     <mesh
                                         name="Office_Chair_chair1_0"
+                                        castShadow
+                                        receiveShadow
                                         geometry={nodes.Office_Chair_chair1_0.geometry}
                                         material={materials.chair1}
                                     />
                                     <mesh
                                         name="Office_Chair_Material003_0"
+                                        castShadow
+                                        receiveShadow
                                         geometry={nodes.Office_Chair_Material003_0.geometry}
                                         material={materials['Material.003']}
                                     />
                                     <mesh
                                         name="Office_Chair_Material002_0"
+                                        castShadow
+                                        receiveShadow
                                         geometry={nodes.Office_Chair_Material002_0.geometry}
                                         material={materials['Material.002']}
                                     />
@@ -255,6 +231,8 @@ const Ant = ({ currectAnimation, ...props }) => {
                                     scale={[-8.296, -12.712, -12.712]}>
                                     <mesh
                                         name="Paper1_Paper_0"
+                                        castShadow
+                                        receiveShadow
                                         geometry={nodes.Paper1_Paper_0.geometry}
                                         material={materials.Paper}
                                     />
@@ -266,6 +244,8 @@ const Ant = ({ currectAnimation, ...props }) => {
                                     scale={[-8.296, -12.712, -12.712]}>
                                     <mesh
                                         name="Paper2_Paper_0"
+                                        castShadow
+                                        receiveShadow
                                         geometry={nodes.Paper2_Paper_0.geometry}
                                         material={materials.Paper}
                                     />
@@ -277,44 +257,12 @@ const Ant = ({ currectAnimation, ...props }) => {
                                     scale={[-34.332, -3.846, -20.887]}>
                                     <mesh
                                         name="Screen_Material005_0"
+                                        castShadow
+                                        receiveShadow
                                         geometry={nodes.Screen_Material005_0.geometry}
                                         material={materials['Material.005']}
                                     />
                                 </group>
-                                {/* <group
-                                    name="Sexy_ant_picture"
-                                    position={[0.485, 119.938, 83.958]}
-                                    rotation={[-3.132, -0.039, -3.138]}
-                                    scale={13.732}>
-                                    <mesh
-                                        name="Sexy_ant_picture_Empty_0"
-                                        geometry={nodes.Sexy_ant_picture_Empty_0.geometry}
-                                        material={materials.Empty}
-                                    />
-                                </group> */}
-                                {/* <group
-                                    name="Walls"
-                                    position={[-163.755, 77.193, 88.138]}
-                                    rotation={[-Math.PI / 2, 0, 0]}
-                                    scale={100}>
-                                    <mesh
-                                        name="Walls_Walls_baked_0"
-                                        geometry={nodes.Walls_Walls_baked_0.geometry}
-                                        material={materials.Walls_baked}
-                                    />
-                                </group>
-                                <group
-                                    name="Walls001"
-                                    position={[-163.755, 77.193, 88.138]}
-                                    rotation={[-Math.PI / 2, 0, 0]}
-                                    scale={100}>
-                                    <mesh
-                                        name="Walls001_Wooden_Wall_by_Jungle_Jim_0"
-                                        geometry={nodes.Walls001_Wooden_Wall_by_Jungle_Jim_0.geometry}
-                                        material={materials.Wooden_Wall_by_Jungle_Jim}
-                                    />
-                                </group> */}
-                                <group name="model" rotation={[-Math.PI / 2, 0, 0]} />
                             </group>
                         </group>
                     </group>
@@ -323,8 +271,5 @@ const Ant = ({ currectAnimation, ...props }) => {
         </group>
     )
 }
-
-// useGLTF.preload('/home_worker_ant.glb')
-
 
 export default Ant
