@@ -27,7 +27,7 @@ export default function Projects() {
       ],
       tech: ['Magento 2', 'PHP', 'MySQL', 'GA', 'GTM', 'DAM'],
       color: 'from-pastel-teal to-cyan-400',
-      image: '/projects/gallerherduffy.png'
+      image: '/projects/gallerherduffy.webp'
     },
     {
       title: 'Harmonbio',
@@ -41,7 +41,7 @@ export default function Projects() {
       ],
       tech: ['Laravel', 'React.js', 'MySQL', 'Queue Management', 'REST API'],
       color: 'from-pastel-lavender to-purple-400',
-      image: '/projects/harmonbio.png'
+      image: '/projects/harmonbio.webp'
     },
     {
       title: 'Winoa',
@@ -55,7 +55,7 @@ export default function Projects() {
       ],
       tech: ['Magento 2', 'AWS EC2', 'Docker', 'Jenkins', 'PIM'],
       color: 'from-pastel-peach to-orange-400',
-      image: '/projects/winoa.png'
+      image: '/projects/winoa.webp'
     },
     {
       title: 'OroCommerce',
@@ -69,7 +69,7 @@ export default function Projects() {
       ],
       tech: ['PHP', 'PostgreSQL', 'Twig', 'OroCommerce', 'Team Leadership'],
       color: 'from-cyan-400 to-blue-400',
-      image: '/projects/orocommerce.png'
+      image: '/projects/orocommerce.webp'
     },
   ]
 
