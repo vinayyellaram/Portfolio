@@ -17,7 +17,7 @@ export function Snow({ count = 500 }) {
     useFrame(() => {
         const p = points.current.geometry.attributes.position;
         for (let i = 0; i < p.count; i++) {
-            p.array[i * 3 + 1] -= 0.02; // fall speed
+            p.array[i * 3 + 1] -= 0.018; // fall speed
             if (p.array[i * 3 + 1] < -1) p.array[i * 3 + 1] = 6; // reset to top
         }
         p.needsUpdate = true;

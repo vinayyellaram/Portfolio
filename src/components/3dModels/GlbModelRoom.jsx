@@ -38,7 +38,7 @@ export default function GlbModelRoom() {
 
             {/* ❄️ Snow Effect */}
             <Suspense>
-                <Snow count={1100} />
+                <Snow count={600} />
             </Suspense>
 
             {/* ✨ Post-processing */}
