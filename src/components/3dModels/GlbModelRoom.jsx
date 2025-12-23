@@ -1,5 +1,6 @@
 import React, { Suspense } from "react";
 import {
+    CameraControls,
     PerspectiveCamera,
     Float,
 } from "@react-three/drei";
@@ -38,7 +39,7 @@ export default function GlbModelRoom() {
 
             {/* ❄️ Snow Effect */}
             <Suspense>
-                <Snow count={600} />
+                <Snow count={500} />
             </Suspense>
 
             {/* ✨ Post-processing */}
@@ -53,17 +54,17 @@ export default function GlbModelRoom() {
 
             {/* 🏠 3D Scene */}
             <Float speed={0.5} rotationIntensity={1} floatIntensity={0.2}>
-                <motion.group
+                {/* <motion.group
                     initial={{ opacity: 0, scale: 0.9, rotation: [0, -Math.PI / 6, 0] }}
                     animate={{ opacity: 1, scale: 1, rotation: [0, 0, 0] }}
                     transition={{ duration: 2, ease: "easeOut" }}
-                >
-                    <EmptyRoom scale={1.5} position={[0, 0, 0]} />
-                </motion.group>
+                > */}
+                <EmptyRoom scale={2} position={[0.5, -0.2, 0]} />
+                {/* </motion.group> */}
             </Float>
 
             {/* 🎮 Camera Controls */}
-            <CinematicCamera maxDistance={5} />
+            <CameraControls maxDistance={4} minDistance={2} />
         </>
     );
 }
