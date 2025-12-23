@@ -16,61 +16,37 @@ export default function Projects() {
 
   const projects = [
     {
-      title: 'GallerherDuffy',
-      platform: 'Magento 2 E-commerce',
-      description: 'E-commerce platform with advanced SEO optimization and analytics integration',
+      title: 'ReportGenius',
+      platform: 'MERN Stack Desktop Application',
+      description: 'SEO analysis tool designed to simplify technical audits and automate website performance insights.',
       highlights: [
-        'SEO optimization implementation',
-        'Google Analytics & GTM integration',
-        'Brandfolder DAM integration for digital asset management',
-        'Performance optimization and conversion tracking'
+        'Real-time SEO score and issue detection',
+        'Hreflang and meta tag validation',
+        'Broken and unsafe link detection',
+        'Exportable CSV reports for detailed analysis'
       ],
-      tech: ['Magento 2', 'PHP', 'MySQL', 'GA', 'GTM', 'DAM'],
-      color: 'from-pastel-teal to-cyan-400',
-      image: '/projects/gallerherduffy.webp'
+      tech: ['MongoDB', 'Express.js', 'React.js', 'Node.js', 'Electron', 'Fast-CSV'],
+      color: 'from-violet-500 to-indigo-400',
+      image: '/projects/report-genius.png',
+      url: 'https://report-genius.vinayyellaram.in'
     },
     {
-      title: 'Harmonbio',
-      platform: 'Laravel & React.js',
-      description: 'Modern headless CRM system with optimized backend and frontend',
+      title: "Portfolio 3D Website",
+      platform: "React.js • Three.js • Framer Motion",
+      description:
+        "An immersive 3D portfolio built with React Three Fiber, blending cinematic storytelling with modern web performance.",
       highlights: [
-        'Built headless UI with React.js for better performance',
-        'Optimized CRM backend with Laravel',
-        'Implemented cron jobs and queue management for background tasks',
-        'Created RESTful APIs for seamless data flow'
+        "Dynamic 3D hero scene with camera controls and bloom effects",
+        "Seamless transitions between sections using Framer Motion",
+        "Lazy loading and Suspense-based asset management",
+        "Deployed on GitHub Pages with CI/CD optimization",
       ],
-      tech: ['Laravel', 'React.js', 'MySQL', 'Queue Management', 'REST API'],
-      color: 'from-pastel-lavender to-purple-400',
-      image: '/projects/harmonbio.webp'
-    },
-    {
-      title: 'Winoa',
-      platform: 'Magento 2 & AWS',
-      description: 'Enterprise e-commerce platform with PIM integration and cloud deployment',
-      highlights: [
-        'PIM (Product Information Management) integration',
-        'AWS EC2 deployment using Docker',
-        'Jenkins CI/CD pipeline setup',
-        'Automated deployment and testing workflows'
-      ],
-      tech: ['Magento 2', 'AWS EC2', 'Docker', 'Jenkins', 'PIM'],
-      color: 'from-pastel-peach to-orange-400',
-      image: '/projects/winoa.webp'
-    },
-    {
-      title: 'OroCommerce',
-      platform: 'OroCommerce & PHP',
-      description: 'Led team in building custom modules with modern technologies',
-      highlights: [
-        'Team leadership and project coordination',
-        'Custom module development with PHP',
-        'PostgreSQL database design and optimization',
-        'Twig template implementation for dynamic content'
-      ],
-      tech: ['PHP', 'PostgreSQL', 'Twig', 'OroCommerce', 'Team Leadership'],
-      color: 'from-cyan-400 to-blue-400',
-      image: '/projects/orocommerce.webp'
-    },
+      tech: ["React.js", "Three.js", "React Three Fiber", "Framer Motion", "GitHub Pages"],
+      color: "from-pastel-teal to-pastel-lavender",
+      image: "/projects/portfolio.png",
+      url: "https://vinayyellaram.in",
+      repo: "https://github.com/VinayYellaram/Portfolio_FE"
+    }
   ]
 
   return (
@@ -159,6 +135,17 @@ export default function Projects() {
           >
             {/* IMAGE IN MODAL */}
             <div className="relative h-48 w-full overflow-hidden">
+              <a
+                href={selectedProject.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center justify-center"
+              >
+                <div className="absolute inset-0 flex items-center justify-center bg-black/30  cursor-pointer">
+                  <ExternalLink className="w-8 h-8 text-white" />
+                </div>
+              </a>
+
               <picture>
                 <source srcSet={selectedProject.image} type="image/webp" />
                 <img
@@ -166,10 +153,10 @@ export default function Projects() {
                   alt={selectedProject.title}
                   onError={(e) => {
                     if (e.currentTarget.src !== window.location.origin + "/projects/fallback.png") {
-                      e.currentTarget.src = "/projects/fallback.png"; // final fallback
+                      e.currentTarget.src = "/projects/fallback.png";
                     }
                   }}
-                  className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 breathe"
                 />
               </picture>
 
@@ -179,6 +166,19 @@ export default function Projects() {
                 className="absolute top-4 right-4 p-2 bg-black/30 hover:bg-black/50 rounded-full transition-colors"
               >
                 <X className="w-6 h-6 text-white" />
+              </button>
+              <button
+                className="absolute top-4 left-4 p-2 bg-black/30 hover:bg-black/50 rounded-full transition-colors"
+              >
+                <a
+                  href={selectedProject.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-center"
+                >
+
+                  <ExternalLink className="w-8 h-8 text-white" />
+                </a>
               </button>
             </div>
 

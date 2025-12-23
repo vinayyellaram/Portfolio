@@ -555,6 +555,22 @@ body,
       text-shadow: 0 0 4px #fff7a1, 0 0 8px #ffffff;
     }
   }
+
+  @keyframes breathe {
+    0%,
+    100% {
+      transform: scale(1);
+      filter: brightness(100%);
+    }
+    50% {
+      transform: scale(1.03);
+      filter: brightness(110%);
+    }
+  }
+
+  .breathe {
+    animation: breathe 3s ease-in-out infinite;
+  }
 }
 
 @layer base {
