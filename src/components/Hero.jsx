@@ -7,6 +7,7 @@ import { Canvas } from "@react-three/fiber";
 import { Html, useProgress } from "@react-three/drei";
 import GlbModelRoom from "./3dModels/GlbModelRoom";
 
+
 function SceneLoader() {
   const { progress } = useProgress();
   return (
@@ -49,7 +50,7 @@ export default function Hero() {
         <Canvas
           shadows
           camera={{ position: [0, 1.5, 4], fov: 50 }}
-          className="!w-full !h-full"
+          className="w-full! h-full!"
         >
           <Suspense fallback={<SceneLoader />}>
             <GlbModelRoom />
