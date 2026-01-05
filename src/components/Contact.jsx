@@ -4,6 +4,7 @@ import { useRef, useState } from "react";
 import { Mail, Github, Linkedin, Send } from "lucide-react";
 import emailjs from "@emailjs/browser";
 import GlbModel from "./3dModels/GlbModel";
+import { toast } from 'react-toastify';
 
 import {
   Card,
@@ -34,9 +35,16 @@ export default function Contact() {
   const handleSubmit = (e) => {
     e.preventDefault();
     sendEmail();
+    toast.success("Message sent successfully!");
+    setFormData({ user_name: "", user_email: "", message: "" });
   };
 
   const sendEmail = async () => {
+
+    validateFormData();
+
+    if (validateFormData instanceof Error) return;
+
     try {
       const response = await emailjs.send(
         "service_xw1i8uo",
@@ -49,11 +57,25 @@ export default function Contact() {
         "L-ovI-oSbdLSpITK7"
       );
       console.log("SUCCESS!", response);
-      alert("Message sent!");
+      toast.success("Message sent successfully!");
+      // alert("Message sent!");
       setFormData({ user_name: "", user_email: "", message: "" });
     } catch (error) {
+      toast.error("Error sending message.");
       console.log("FAILED...", error);
-      alert("Error sending message.");
+      // alert("Error sending message.");
+    }
+  };
+
+  const validateFormData = () => {
+    if (!formData.user_name || !formData.user_email || !formData.message) {
+      toast.error("Please fill in all fields.");
+      throw new Error("Please fill in all fields.");
+    }
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(formData.user_email)) {
+      toast.error("Please enter a valid email address.");
+      throw new Error("Please enter a valid email address.");
     }
   };
 

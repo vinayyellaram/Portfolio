@@ -7,7 +7,6 @@ import { Canvas } from "@react-three/fiber";
 import { Html, useProgress } from "@react-three/drei";
 import GlbModelRoom from "./3dModels/GlbModelRoom";
 
-
 function SceneLoader() {
   const { progress } = useProgress();
   return (

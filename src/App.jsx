@@ -1,5 +1,4 @@
-import React, { useState, useEffect } from "react";
-// import Sky from "./components/Sky";
+import React, { useState, useEffect, Suspense } from "react";
 import Hero from "./components/Hero";
 import { ThemeProvider } from "./components/theme-provider";
 import Footer from "@components/Footer";
@@ -32,7 +31,9 @@ export default function App() {
         <Experience />
         <Skills />
         <Projects />
-        <Contact />
+        <Suspense fallback={null}>
+          <Contact />
+        </Suspense>
         <Footer />
       </>
     </ThemeProvider>
