@@ -19,7 +19,7 @@ export default function Experience() {
     {
       role: "Software Engineer 2",
       company: "Apexon",
-      period: "2023 - Present",
+      period: "2024 - Present",
       achievements: [
         "Led development of multiple Magento 2 projects with custom integrations",
         "Implemented PIM and DAM systems for enterprise clients",
@@ -30,7 +30,7 @@ export default function Experience() {
     {
       role: "Software Engineer 1",
       company: "Apexon",
-      period: "2022 - 2023",
+      period: "2022 - 2024",
       achievements: [
         "Developed headless CRM system using Laravel and React.js",
         "Integrated third-party APIs including HubSpot and Google Analytics",
