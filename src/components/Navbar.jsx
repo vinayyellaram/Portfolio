@@ -5,8 +5,10 @@ const Navbar = () => {
     return (
         <header className="top-0 left-0 w-full z-20 flex justify-between items-center p-4 backdrop-blur-sm sticky">
 
-            <h2 className="text-3xl font-bold text-foreground"> <a href="#home">
-                VY</a>
+            <h2 className="text-2xl font-bold text-foreground">
+                <a href="#home">
+                    <img src="/title_logo.png" alt="Logo" className="h-20 w-auto" />
+                </a>
             </h2>
             <nav className="flex gap-6">
                 <a href="#about" className="pixel-button text-sm text-muted-foreground hover:text-foreground transition">About</a>

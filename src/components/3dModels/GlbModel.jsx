@@ -10,7 +10,6 @@ import Ant from "../3dModels/Ant";
 function GlbModel({ currectAnimation }) {
     return (
         <>
-            <title>GLB Model</title>
             <main className="px-5">
                 <div className="h-[500px]">
                     <Canvas>
