@@ -10,10 +10,10 @@ const Navbar = () => {
                     <img src="/title_logo.png" alt="Logo" className="h-20 w-auto" />
                 </a>
             </h2>
-            <nav className="flex gap-6">
-                <a href="#about" className="pixel-button text-sm text-muted-foreground hover:text-foreground transition">About</a>
-                <a href="#projects" className="pixel-button text-sm text-muted-foreground hover:text-foreground transition">Projects</a>
-                <a href="#contact" className="pixel-button text-sm text-muted-foreground hover:text-foreground transition">Contact</a>
+            <nav className="flex gap-3 items-center">
+                <a href="#about" className="nav-link">About</a>
+                <a href="#projects" className="nav-link">Projects</a>
+                <a href="#contact" className="nav-link">Contact</a>
                 <ModeToggle></ModeToggle>
             </nav>
         </header>

@@ -97,17 +97,14 @@ export default function Hero() {
           results that actually matter.
         </motion.p>
 
-        <button
-          className="text-xl scroll-down-button pixel-button mt-10 pointer-events-auto"
-          onClick={() => {
-            window.scrollBy({
-              top: window.innerHeight,
-              behavior: "smooth",
-            });
-          }}
-        >
-          <span className="arrow">Learn More</span>
-        </button>
+        <div className="flex gap-4 mt-10 pointer-events-auto flex-wrap">
+          <a href="#projects" className="cta-btn cta-btn-primary">
+            View Projects
+          </a>
+          <a href="#contact" className="cta-btn cta-btn-outline">
+            Download Resume
+          </a>
+        </div>
       </motion.div>
     </section>
   );

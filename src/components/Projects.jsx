@@ -31,21 +31,19 @@ export default function Projects() {
       url: 'https://report-genius.vinayyellaram.in'
     },
     {
-      title: "Portfolio 3D Website",
-      platform: "React.js • Three.js • Framer Motion",
-      description:
-        "An immersive 3D portfolio built with React Three Fiber, blending cinematic storytelling with modern web performance.",
+      title: 'Dhamu — Personal AI Assistant',
+      platform: 'Full Stack AI Application',
+      description: 'A Claude-powered personal second brain with long-term RAG memory. Combines chat, knowledge base, streak tracking, Telegram bot, and Google Calendar into a self-hosted productivity system.',
       highlights: [
-        "Dynamic 3D hero scene with camera controls and bloom effects",
-        "Seamless transitions between sections using Framer Motion",
-        "Lazy loading and Suspense-based asset management",
-        "Deployed on GitHub Pages with CI/CD optimization",
+        'RAG memory with Weaviate vector DB — semantically retrieves past context on every message',
+        'Telegram bot with cron-driven morning check-ins, evening nudges, and weekly action plans',
+        'Google Calendar & Drive integration with automated weekly backups',
+        'React Native mobile app with geofencing and push notifications',
       ],
-      tech: ["React.js", "Three.js", "React Three Fiber", "Framer Motion", "GitHub Pages"],
-      color: "from-pastel-teal to-pastel-lavender",
-      image: "/projects/portfolio.png",
-      url: "https://vinayyellaram.in",
-      repo: "https://github.com/VinayYellaram/Portfolio_FE"
+      tech: ['Node.js', 'Express', 'React', 'Claude AI', 'Weaviate', 'SQLite', 'Docker', 'Telegram API', 'Expo'],
+      color: 'from-violet-500 to-purple-400',
+      image: '/projects/dhamu.png',
+      url: 'https://assistant.vinayyellaram.in'
     }
   ]
 
@@ -76,15 +74,10 @@ export default function Projects() {
                 {/* IMAGE SECTION */}
                 <div className="relative h-56 overflow-hidden">
                   <picture>
-                    <source srcSet={project.image} type="image/webp" />
                     <img
-                      src="/projects/placeholder.png"
+                      src={project.image}
                       alt={project.title}
-                      onError={(e) => {
-                        if (e.currentTarget.src !== window.location.origin + "/projects/fallback.png") {
-                          e.currentTarget.src = "/projects/fallback.png"; // final fallback
-                        }
-                      }}
+                      onError={(e) => { e.currentTarget.style.display = 'none'; }}
                       className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                     />
                   </picture>
@@ -147,15 +140,10 @@ export default function Projects() {
               </a>
 
               <picture>
-                <source srcSet={selectedProject.image} type="image/webp" />
                 <img
-                  src="/projects/placeholder.png"
+                  src={selectedProject.image}
                   alt={selectedProject.title}
-                  onError={(e) => {
-                    if (e.currentTarget.src !== window.location.origin + "/projects/fallback.png") {
-                      e.currentTarget.src = "/projects/fallback.png";
-                    }
-                  }}
+                  onError={(e) => { e.currentTarget.style.display = 'none'; }}
                   className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 breathe"
                 />
               </picture>
