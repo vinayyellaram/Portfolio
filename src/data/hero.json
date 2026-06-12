@@ -1,0 +1,40 @@
+{
+  "name": [
+    { "text": "VINAY",    "outline": true  },
+    { "text": "YELLARAM", "outline": false }
+  ],
+  "tagline": "Full Stack Engineer · E-commerce · AI Integration",
+  "availabilityLabel": "Available for work",
+  "statCards": [
+    { "value": "4+",     "unit": "Years",    "label": "Experience"     },
+    { "value": "2",      "unit": "Products", "label": "Shipped live"   },
+    { "value": "Mumbai", "unit": "",         "label": "Open to remote" }
+  ],
+  "ctas": [
+    { "label": "See my work",  "href": "#projects", "variant": "default" },
+    { "label": "Work with me", "href": "#services", "variant": "outline" }
+  ],
+  "terminal": {
+    "titleBarLabel": "vinay@portfolio ~",
+    "lines": [
+      { "text": "$ whoami",                             "type": "command" },
+      { "text": "Vinay Yellaram — Full Stack Engineer", "type": "output"  },
+      { "text": "",                                     "type": "blank"   },
+      { "text": "$ vinay --stack",                      "type": "command" },
+      { "text": "→ React.js  Node.js  TypeScript",      "type": "arrow"   },
+      { "text": "→ Laravel  Magento 2  AWS  Docker",    "type": "arrow"   },
+      { "text": "",                                     "type": "blank"   },
+      { "text": "$ vinay --building",                   "type": "command" },
+      { "text": "→ OpenAI API  LangChain.js",           "type": "arrow"   },
+      { "text": "→ RAG Pipelines  AI Agents",           "type": "arrow"   },
+      { "text": "",                                     "type": "blank"   },
+      { "text": "$ vinay --status",                     "type": "command" },
+      { "text": "✓ Available for work",                 "type": "success" },
+      { "text": "✓ Open to remote",                     "type": "success" },
+      { "text": "",                                     "type": "blank"   },
+      { "text": "$ vinay --location",                   "type": "command" },
+      { "text": "→ Mumbai, India",                      "type": "arrow"   },
+      { "text": "",                                     "type": "blank"   }
+    ]
+  }
+}

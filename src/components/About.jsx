@@ -1,4 +1,5 @@
 import Section from "@components/Section";
+import aboutData from "../data/about.json";
 
 export default function About() {
   return (
@@ -12,13 +13,11 @@ export default function About() {
           style={{ background: "#161616", borderColor: "#242424", borderRadius: 12 }}
         >
           <p className="text-base leading-relaxed text-muted-foreground">
-            I build e-commerce platforms, full stack web apps, and AI-powered
-            products. 4+ years in production — Magento 2 storefronts, React/Node.js
-            systems, and now integrating LLMs and RAG pipelines into real products.
+            {aboutData.bio}
           </p>
         </article>
 
-        {/* Cell 2 — photo */}
+        {/* Cell 2 — photo (commented out) */}
         {/* <article
           data-reveal
           className="rounded-xl border overflow-hidden"
@@ -38,8 +37,8 @@ export default function About() {
           className="rounded-xl border p-6 flex flex-col gap-1"
           style={{ background: "#161616", borderColor: "#242424", borderRadius: 12 }}
         >
-          <span className="text-lg font-semibold">📍 Mumbai, India</span>
-          <span className="text-sm text-muted-foreground">Open to remote</span>
+          <span className="text-lg font-semibold">{aboutData.location}</span>
+          <span className="text-sm text-muted-foreground">{aboutData.locationSub}</span>
         </article>
 
         {/* Cell 4 — currently */}
@@ -49,7 +48,7 @@ export default function About() {
           style={{ background: "#161616", borderColor: "#242424", borderRadius: 12 }}
         >
           <span className="text-xs uppercase tracking-widest text-muted-foreground mb-1">Currently</span>
-          <span className="font-semibold leading-snug">Senior Full Stack Engineer @ Vernoist Marketing</span>
+          <span className="font-semibold leading-snug">{aboutData.currently}</span>
         </article>
 
         {/* Cell 5 — building toward */}
@@ -59,7 +58,7 @@ export default function About() {
           style={{ background: "#161616", borderColor: "#242424", borderRadius: 12 }}
         >
           <span className="text-xs uppercase tracking-widest text-muted-foreground mb-1">Building toward</span>
-          <span className="font-semibold leading-snug">AI Integration Engineering · LangChain.js · RAG · Agents</span>
+          <span className="font-semibold leading-snug">{aboutData.buildingToward}</span>
         </article>
 
       </div>

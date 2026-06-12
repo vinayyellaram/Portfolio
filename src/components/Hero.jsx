@@ -1,29 +1,11 @@
 import { useEffect, useLayoutEffect, useRef, useState } from "react";
 import { gsap } from "../lib/useReveal";
 import { Button } from "@components/components/ui/button";
+import heroData from "../data/hero.json";
 
 // ─── Terminal ─────────────────────────────────────────────────────────────────
 
-const TERMINAL_LINES = [
-    { text: "$ whoami",                              type: "command" },
-    { text: "Vinay Yellaram — Full Stack Engineer",  type: "output"  },
-    { text: "",                                      type: "blank"   },
-    { text: "$ vinay --stack",                       type: "command" },
-    { text: "→ React.js  Node.js  TypeScript",       type: "arrow"   },
-    { text: "→ Laravel  Magento 2  AWS  Docker",     type: "arrow"   },
-    { text: "",                                      type: "blank"   },
-    { text: "$ vinay --building",                    type: "command" },
-    { text: "→ OpenAI API  LangChain.js",            type: "arrow"   },
-    { text: "→ RAG Pipelines  AI Agents",            type: "arrow"   },
-    { text: "",                                      type: "blank"   },
-    { text: "$ vinay --status",                      type: "command" },
-    { text: "✓ Available for work",                  type: "success" },
-    { text: "✓ Open to remote",                      type: "success" },
-    { text: "",                                      type: "blank"   },
-    { text: "$ vinay --location",                    type: "command" },
-    { text: "→ Mumbai, India",                       type: "arrow"   },
-    { text: "",                                      type: "blank"   },
-];
+const TERMINAL_LINES = heroData.terminal.lines;
 
 const CHAR_MS  = 30;
 const LINE_MS  = 350;
@@ -101,7 +83,7 @@ function TerminalBlock() {
                     <span className="size-3 rounded-full inline-block" style={{ background: "#ffbd2e" }} />
                     <span className="size-3 rounded-full inline-block" style={{ background: "#28c840" }} />
                 </div>
-                <span className="font-mono text-xs" style={{ color: "#888" }}>vinay@portfolio ~</span>
+                <span className="font-mono text-xs" style={{ color: "#888" }}>{heroData.terminal.titleBarLabel}</span>
             </div>
             <div className="font-mono text-sm p-5" style={{ lineHeight: 1.8, minHeight: 280 }}>
                 {TERMINAL_LINES.map((line, i) => {
@@ -122,16 +104,7 @@ function TerminalBlock() {
 
 // ─── Hero ─────────────────────────────────────────────────────────────────────
 
-const nameWords = [
-    { text: "VINAY",    outline: true  },
-    { text: "YELLARAM", outline: false },
-];
-
-const statCards = [
-    { value: "4+",     unit: "Years",    label: "Experience"    },
-    { value: "2",      unit: "Products", label: "Shipped live"  },
-    { value: "Mumbai", unit: "",         label: "Open to remote" },
-];
+const { name: nameWords, statCards, ctas, tagline, availabilityLabel } = heroData;
 
 export default function Hero() {
     const ref     = useRef(null);
@@ -216,7 +189,7 @@ export default function Hero() {
                         className="inline-flex w-fit items-center gap-2 rounded-full border border-border bg-background/60 backdrop-blur-sm px-4 py-1.5 text-sm text-muted-foreground"
                     >
                         <span className="pulse-dot size-2 rounded-full bg-emerald-400" />
-                        Available for work
+                        {availabilityLabel}
                     </p>
 
                     <h1
@@ -236,7 +209,7 @@ export default function Hero() {
                     </h1>
 
                     <p data-hero className="text-base md:text-lg font-medium text-muted-foreground">
-                        Full Stack Engineer · E-commerce · AI Integration
+                        {tagline}
                         <span className="blink ml-1">_</span>
                     </p>
 
@@ -258,12 +231,11 @@ export default function Hero() {
                     </div>
 
                     <div data-hero className="flex flex-wrap gap-3">
-                        <Button size="lg" asChild>
-                            <a href="#projects">See my work</a>
-                        </Button>
-                        <Button size="lg" variant="outline" asChild>
-                            <a href="#services">Work with me</a>
-                        </Button>
+                        {ctas.map(({ label, href, variant }) => (
+                            <Button key={href} size="lg" variant={variant} asChild>
+                                <a href={href}>{label}</a>
+                            </Button>
+                        ))}
                     </div>
                 </div>
 
