@@ -1,0 +1,33 @@
+[
+  {
+    "name": "Dhamu",
+    "description": "Personal AI assistant with memory and calendar integration",
+    "detail": "Built a personal AI assistant with persistent memory, Telegram bot interface, Google Calendar integration, and RAG-based knowledge retrieval using Weaviate. Designed to answer questions from a personal knowledge base and take actions on my behalf.",
+    "tags": ["Claude API", "OpenAI Embeddings", "Weaviate", "SQLite", "Node.js", "Telegram"],
+    "liveUrl": "https://assistant.vinayyellaram.in",
+    "githubUrl": "https://github.com/vinayyellaram",
+    "featured": true
+  },
+  {
+    "name": "SEO Report Genius",
+    "description": "Standalone SaaS SEO audit tool",
+    "detail": "Standalone SaaS tool that crawls any URL and generates a full SEO audit report. Built and shipped solo end-to-end — from crawler logic to PDF export and billing integration.",
+    "tags": ["React", "TypeScript", "Node.js", "Puppeteer"],
+    "liveUrl": "https://report-genius.vinayyellaram.in",
+    "githubUrl": "https://github.com/vinayyellaram"
+  },
+  {
+    "name": "Company Brain",
+    "description": "B2B AI knowledge management",
+    "detail": "Internal knowledge base for teams that indexes documents and surfaces answers via LLM. Designed for non-technical users who need to query company documentation without digging through folders.",
+    "tags": ["LangChain.js", "React", "Node.js"],
+    "status": "in progress"
+  },
+  {
+    "name": "Logbook",
+    "description": "Personal content engine with AI post generation",
+    "detail": "A personal publishing system that generates and schedules social content from short notes. Claude drafts posts from bullet points; I review and publish.",
+    "tags": ["Claude API", "React", "SQLite"],
+    "status": "upcoming"
+  }
+]

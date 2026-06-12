@@ -1,7 +1,4 @@
 import { createContext, useContext, useEffect, useState } from "react"
-import Sky from "./Sky"
-import { ToastContainer, toast } from 'react-toastify';
-
 
 const initialState = {
     theme: "system",
@@ -48,8 +45,6 @@ export function ThemeProvider({
 
     return (
         <ThemeProviderContext.Provider {...props} value={value}>
-            <ToastContainer closeOnClick={true} theme={theme} />
-            <Sky darkMode={theme === "dark" || (theme === "system" && window.matchMedia("(prefers-color-scheme: dark)").matches)} />
             {children}
         </ThemeProviderContext.Provider>
     )

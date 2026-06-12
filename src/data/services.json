@@ -1,0 +1,35 @@
+[
+  {
+    "icon": "Code2",
+    "title": "Full Stack Development",
+    "description": "React + Node.js products, API design, performance optimization.",
+    "bullets": [
+      "React + Node.js web applications",
+      "REST API design and integration",
+      "Performance optimization",
+      "AWS deployment and Docker setup"
+    ]
+  },
+  {
+    "icon": "ShoppingCart",
+    "title": "E-commerce Engineering",
+    "description": "Magento 2, Shopify, OroCommerce consulting, PIM integrations, headless builds.",
+    "bullets": [
+      "Magento 2 development and customization",
+      "Shopify and OroCommerce builds",
+      "PIM integrations",
+      "Headless e-commerce architecture"
+    ]
+  },
+  {
+    "icon": "Sparkles",
+    "title": "AI Integration",
+    "description": "Adding LLM features to existing products, RAG pipelines, AI agents.",
+    "bullets": [
+      "LLM integration into existing products",
+      "RAG pipeline design and implementation",
+      "OpenAI and Claude API integration",
+      "AI agents with human-in-the-loop design"
+    ]
+  }
+]

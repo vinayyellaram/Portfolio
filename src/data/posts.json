@@ -1,0 +1,20 @@
+[
+  {
+    "title": "Building Dhamu: a personal AI assistant from scratch",
+    "date": "2026-05-28",
+    "excerpt": "Why I picked Weaviate over pgvector, how embeddings-based recall works in practice, and what broke along the way.",
+    "url": "#"
+  },
+  {
+    "title": "RAG pipelines without a framework",
+    "date": "2026-05-12",
+    "excerpt": "Chunking, embedding, retrieval, and prompt assembly with plain Node.js — before reaching for LangChain.",
+    "url": "#"
+  },
+  {
+    "title": "Four years as a sole engineer: what it actually teaches you",
+    "date": "2026-04-30",
+    "excerpt": "Owning a production marketing platform end-to-end — on-call, deploys, stakeholders, and saying no.",
+    "url": "#"
+  }
+]

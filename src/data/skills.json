@@ -1,0 +1,17 @@
+{
+  "current": [
+    { "name": "React.js" },
+    { "name": "Node.js" },
+    { "name": "TypeScript" },
+    { "name": "Laravel" },
+    { "name": "Magento 2" },
+    { "name": "AWS" },
+    { "name": "Docker" }
+  ],
+  "learningPath": [
+    { "name": "OpenAI API", "status": "done" },
+    { "name": "LangChain.js", "status": "current" },
+    { "name": "RAG", "status": "next" },
+    { "name": "AI Agents", "status": "next" }
+  ]
+}
