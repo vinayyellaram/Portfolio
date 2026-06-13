@@ -184,8 +184,8 @@ export default function Hero() {
                 className="md:hidden pointer-events-none absolute inset-0 flex items-center justify-end overflow-hidden z-[1]"
             >
                 <div
-                    className="opacity-35 scale-[1.15] origin-right translate-x-8"
-                    style={{ filter: "blur(3px)" }}
+                    className="opacity-65 scale-[1.15] origin-right translate-x-8"
+                    style={{ filter: "blur(2px)" }}
                 >
                     <TerminalBlock />
                 </div>
