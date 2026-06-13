@@ -178,6 +178,23 @@ export default function Hero() {
                 ))}
             </div>
 
+            {/* Mobile: terminal sits in the background */}
+            <div
+                aria-hidden
+                className="md:hidden pointer-events-none absolute inset-0 flex items-center justify-end overflow-hidden z-[1]"
+            >
+                <div className="opacity-40 scale-[1.15] origin-right translate-x-8">
+                    <TerminalBlock />
+                </div>
+            </div>
+
+            {/* Mobile: frosted glass overlay on top of the terminal */}
+            <div
+                aria-hidden
+                className="md:hidden pointer-events-none absolute inset-0 z-[2]"
+                style={{ background: "rgba(10,10,10,0.55)", backdropFilter: "blur(4px)" }}
+            />
+
             {/* Main layout */}
             <div className="flex-1 max-w-6xl mx-auto w-full px-6 flex items-center relative z-10">
 
