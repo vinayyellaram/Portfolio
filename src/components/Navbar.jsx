@@ -42,13 +42,13 @@ export default function Navbar() {
           VY
         </a>
 
-        {/* Nav links */}
+        {/* Nav links — hidden on mobile */}
         <nav className="flex items-center gap-1">
           {links.map(({ href, label }) => (
             <a
               key={href}
               href={href}
-              className="group relative px-4 py-2.5 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors duration-200"
+              className="group relative hidden md:inline-flex px-4 py-2.5 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors duration-200"
             >
               {label}
               <span className="absolute bottom-1.5 left-4 right-4 h-px bg-foreground scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ease-out origin-left" />
@@ -58,7 +58,7 @@ export default function Navbar() {
           {/* Hire me CTA */}
           <a
             href="#contact"
-            className="ml-3 inline-flex items-center gap-1.5 rounded-full border border-foreground/30 px-5 py-2 text-sm font-semibold text-foreground hover:bg-foreground hover:text-background hover:border-foreground transition-all duration-200"
+            className="md:ml-3 inline-flex items-center gap-1.5 rounded-full border border-foreground/30 px-4 py-1.5 md:px-5 md:py-2 text-sm font-semibold text-foreground hover:bg-foreground hover:text-background hover:border-foreground transition-all duration-200"
           >
             Hire me
             <ArrowUpRight className="size-3.5" />
